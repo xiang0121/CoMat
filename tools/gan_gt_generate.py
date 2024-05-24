@@ -126,7 +126,7 @@ prompt_loader = torch.utils.data.DataLoader(
     prompt_dataset,
     shuffle=False,
     batch_size=batch_size,
-    num_workers=4
+    num_workers=12
 )
 
 # load model
@@ -174,7 +174,7 @@ with torch.no_grad():
             prompts, 
             height=512,
             width=512,
-            num_inference_steps=50, 
+            num_inference_steps=30, 
             generator=generator, 
             guidance_scale=7.5, 
             guidance_rescale=0.0,
